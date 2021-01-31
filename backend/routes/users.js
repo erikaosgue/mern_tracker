@@ -17,7 +17,7 @@ router.route('/').get((req, res) => {
 
 // Second Endpoint handles incomming http post request
 // localhost:5000/users/add
-router.route('./add').post((req, res) => {
+router.route('/add').post((req, res) => {
 
   const username = req.body.username
 

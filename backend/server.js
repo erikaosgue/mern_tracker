@@ -33,8 +33,8 @@ conection.once('open', () => {
 const exerciseRouter = require('./routes/exercises');
 const usersRouter = require('./routes/users');
 // app will be using the routers exerciseRouter and userRouter
-app.use('./exercises', exerciseRouter);
-app.use('./users', usersRouter);
+app.use('/exercises', exerciseRouter);
+app.use('/users', usersRouter);
 
 // Start our server
 app.listen(port, () => {
