@@ -2,6 +2,9 @@ const mogoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
+// This is a class exerciseSchema
+// This is like a class in pytohn when creating the tablas
+
 const exerciseSchema = new Schema(
   {
     username: { 
