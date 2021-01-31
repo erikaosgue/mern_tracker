@@ -16,3 +16,7 @@ const userSchema = new Schema(
     timestamps: true //Create field for: when it was created, and when was modified
   }
 );
+
+const User = mongoose.model('User', userSchema);
+
+module.exports = User;
