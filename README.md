@@ -1,3 +1,24 @@
+# Exercise Track
+
+This is a basic project using the MERN stack, Here we create a Backend using Node.js and Express, with a database Mongo Atlas DB and a front using REACT 
+
+
+How to Use it:
+
+1. Start the Backend Server:
+    nodemon server.js
+
+2. Start the front server:
+    npm start
+
+3. Enter in the ULR 
+    http://localhost:3000/
+
+Once you are in the web Application you can:
+
+    * Create a New user (Create User)
+    * Create a new exercise (Create Exercise Log)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
