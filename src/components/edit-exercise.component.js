@@ -1,12 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
-
 export default class EditExercise extends Component {
-  
-  
   constructor(props) {
     super(props);
 
@@ -26,8 +23,6 @@ export default class EditExercise extends Component {
   }
 
   componentDidMount() {
-
-    // getting the id from the url
     axios.get('http://localhost:5000/exercises/'+this.props.match.params.id)
       .then(response => {
         this.setState({
@@ -92,8 +87,7 @@ export default class EditExercise extends Component {
     console.log(exercise);
 
     axios.post('http://localhost:5000/exercises/update/' + this.props.match.params.id, exercise)
-      .then(res => console.log(res.data))
-      .catch(error => console.log(error));
+      .then(res => console.log(res.data));
 
     window.location = '/';
   }
