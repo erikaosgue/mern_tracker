@@ -1,17 +1,20 @@
-# Exercise Track
+# Exercise Track (MERN STACK)
 
 This is a basic project using the MERN stack, Here we create a Backend using Node.js and Express, with a database Mongo Atlas DB and a front using REACT 
 
 
 How to Use it:
 
-1. Start the Backend Server:
+[1.Start the Backend Server:]()
+    
     nodemon server.js
 
-2. Start the front server:
+[2.Start the front server:]()
+    
     npm start
 
-3. Enter in the ULR 
+[3.Enter in the ULR]( http://localhost:3000/)
+    
     http://localhost:3000/
 
 Once you are in the web Application you can:
@@ -19,6 +22,11 @@ Once you are in the web Application you can:
     * Create a New user (Create User)
     * Create a new exercise (Create Exercise Log)
     * Get the list of all Exercises from all users
+    * Delete an Exercise
+    * Edit an exercise
+
+
+
 
 
 
