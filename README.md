@@ -18,6 +18,9 @@ Once you are in the web Application you can:
 
     * Create a New user (Create User)
     * Create a new exercise (Create Exercise Log)
+    * Get the list of all Exercises from all users
+
+
 
 # Getting Started with Create React App
 
