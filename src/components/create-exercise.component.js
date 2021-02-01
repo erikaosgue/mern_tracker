@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
+import axios from 'axios';
 
 export default class CreateExercises extends Component {
   //All react component clases tha have a constructor should start with a super(props) call
@@ -24,12 +27,21 @@ export default class CreateExercises extends Component {
   
   // Life cicle method
   // Will be call right before anything is display in the page 
+  
   componentDidMount() {
-    this.setState({
-      users: ['test user'],
-      username: 'test user'
-    })
 
+    axios.get('http://localhost:5000/users/')
+      .then(response => {
+        if (response.data.length > 0) {
+          this.setState({
+            users: response.data.map(user => user.username),
+            username: response.data[0].username
+          })
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
   // This method will handle the form
   //To update the state use setState
@@ -69,11 +81,13 @@ export default class CreateExercises extends Component {
     }
     console.log(exercise);
 
+    axios.post('http://localhost:5000/exercises/add', exercise)
+    .then(res => console.log(res.data))
+    .catch(error => console.log(error))
+
     window.location = '/';
   }
 
-
-  
   render() {
     return (
       <div>
